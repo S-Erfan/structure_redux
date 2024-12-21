@@ -20,22 +20,6 @@ const initialState: ICharacter = {
   isError: false,
 };
 
-// AsyncThunk to fetch characters with query filters
-// export const fetchCharacters = createAsyncThunk(
-//   "characters/fetchCharacters",
-//   async (queryParams: Record<string, string>, { rejectWithValue }) => {
-//     try {
-//       const queryString = new URLSearchParams(queryParams).toString();
-//       const response = await axios.get(
-//         `https://rickandmortyapi.com/api/character?${queryString}`
-//       );
-//       return response.data;
-//     } catch (error: any) {
-//       return rejectWithValue(error.response?.data || "Failed to fetch data");
-//     }
-//   }
-// );
-
 export const getListCharacters = createAsyncThunk(
   "characters_get_req",
   async (
